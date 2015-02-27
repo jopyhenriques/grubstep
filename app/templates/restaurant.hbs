@@ -1,3 +1,9 @@
 <h2>{{model.name}}</h2>
-<p>{{model.address}}</p>
-<p>{{model.phone_number}}</p>
+<p class="address"><small>{{model.address}}</small></p>
+<p class="phone"><small>{{model.phone_number}}</small></p>
+
+<ul id="menu-items">
+  {{#each menu_item in model.menu_items}}
+    {{render "menu_item" menu_item}}
+  {{/each}}
+</ul>
